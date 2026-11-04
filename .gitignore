@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+data/
+node_modules/
+.tools/
+*.log
+output/*
+!output/video/
+!output/evidence/
+output/video/*
+!output/video/Stockwise-3-minute-demo.mp4
+!output/video/captions.srt
+!output/video/voice-*.mp3
+output/evidence/*
+!output/evidence/meta-live-check.json

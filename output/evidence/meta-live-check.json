@@ -1,0 +1,234 @@
+{
+  "mode": "live",
+  "model": "muse-spark-1.3",
+  "answer": "Purchase 25 kg Basmati rice from Fresh Fields Supply.\n\nHorizon is 2 days = 1 lead day + 1 review day.\n\nMath in kg: required 27.678 + 10% safety 2.768 - usable stock 3 - inbound 5 = shortfall 22.445. Stock as of 2026-11-04.\n\nPack rounding: 5 kg packs, so 22.445 rounds up to 25 kg, adding 2.555 kg rounding. Estimated cost 2000.\n\nRecipes used, both approved v1.0, purchased basis yield 1.0:\n- Biryani: 100 g rice / serving\n- Bowl: 80 g rice / serving\n\nOrder deadline: order by 2026-11-04. Not urgent. Synthetic demonstration data; this is a plan suggestion only, not an order placed.",
+  "trace": [
+    {
+      "name": "get_purchase_plan",
+      "arguments": {},
+      "result": {
+        "asOf": "2026-11-04",
+        "purchases": [
+          {
+            "id": "rice",
+            "name": "Basmati rice",
+            "unit": "kg",
+            "supplier": "Fresh Fields Supply",
+            "stockUpdatedAt": "2026-11-04",
+            "cost": 80,
+            "leadDays": 1,
+            "reviewDays": 1,
+            "required": 27.678,
+            "safety": 2.768,
+            "usable": 3,
+            "inbound": 5,
+            "shortfall": 22.445,
+            "packSize": 5,
+            "order": 25,
+            "rounding": 2.555,
+            "orderBy": "2026-11-04",
+            "urgent": false,
+            "estimate": 2000,
+            "horizon": 2
+          },
+          {
+            "id": "vegetables",
+            "name": "Seasonal vegetables",
+            "unit": "kg",
+            "supplier": "Fresh Fields Supply",
+            "stockUpdatedAt": "2026-11-04",
+            "cost": 60,
+            "leadDays": 1,
+            "reviewDays": 1,
+            "required": 38.847,
+            "safety": 3.885,
+            "usable": 8,
+            "inbound": 2,
+            "shortfall": 32.732,
+            "packSize": 2,
+            "order": 34,
+            "rounding": 1.268,
+            "orderBy": "2026-11-04",
+            "urgent": false,
+            "estimate": 2040,
+            "horizon": 2
+          },
+          {
+            "id": "chickpeas",
+            "name": "Chickpeas",
+            "unit": "kg",
+            "supplier": "Fresh Fields Supply",
+            "stockUpdatedAt": "2026-11-04",
+            "cost": 110,
+            "leadDays": 1,
+            "reviewDays": 1,
+            "required": 11.874,
+            "safety": 1.187,
+            "usable": 4,
+            "inbound": 2,
+            "shortfall": 7.061,
+            "packSize": 2,
+            "order": 8,
+            "rounding": 0.939,
+            "orderBy": "2026-11-05",
+            "urgent": false,
+            "estimate": 880,
+            "horizon": 2
+          },
+          {
+            "id": "milk",
+            "name": "Milk",
+            "unit": "l",
+            "supplier": "Fresh Fields Supply",
+            "stockUpdatedAt": "2026-11-04",
+            "cost": 58,
+            "leadDays": 1,
+            "reviewDays": 1,
+            "required": 33.735,
+            "safety": 3.374,
+            "usable": 6,
+            "inbound": 2,
+            "shortfall": 29.109,
+            "packSize": 2,
+            "order": 30,
+            "rounding": 0.892,
+            "orderBy": "2026-11-04",
+            "urgent": false,
+            "estimate": 1740,
+            "horizon": 2
+          },
+          {
+            "id": "tea",
+            "name": "Tea leaves",
+            "unit": "kg",
+            "supplier": "Fresh Fields Supply",
+            "stockUpdatedAt": "2026-11-04",
+            "cost": 420,
+            "leadDays": 1,
+            "reviewDays": 1,
+            "required": 0.843,
+            "safety": 0.084,
+            "usable": 0.928,
+            "inbound": 0,
+            "shortfall": 0,
+            "packSize": 0.5,
+            "order": 0,
+            "rounding": 0,
+            "orderBy": "2026-11-05",
+            "urgent": false,
+            "estimate": 0,
+            "horizon": 2
+          }
+        ],
+        "safetyPercent": 10,
+        "dataLabel": "Synthetic demonstration data"
+      }
+    },
+    {
+      "name": "get_recipes",
+      "arguments": {},
+      "result": {
+        "asOf": "2026-11-04",
+        "recipes": [
+          {
+            "itemId": "biryani",
+            "version": "1.0",
+            "approved": true,
+            "servings": 1,
+            "ingredients": [
+              {
+                "ingredientId": "rice",
+                "quantity": 100,
+                "unit": "g",
+                "yield": 1,
+                "basis": "purchased"
+              },
+              {
+                "ingredientId": "vegetables",
+                "quantity": 80,
+                "unit": "g",
+                "yield": 0.8,
+                "basis": "prepared"
+              }
+            ]
+          },
+          {
+            "itemId": "bowl",
+            "version": "1.0",
+            "approved": true,
+            "servings": 1,
+            "ingredients": [
+              {
+                "ingredientId": "rice",
+                "quantity": 80,
+                "unit": "g",
+                "yield": 1,
+                "basis": "purchased"
+              },
+              {
+                "ingredientId": "vegetables",
+                "quantity": 100,
+                "unit": "g",
+                "yield": 0.8,
+                "basis": "prepared"
+              },
+              {
+                "ingredientId": "chickpeas",
+                "quantity": 40,
+                "unit": "g",
+                "yield": 1,
+                "basis": "purchased"
+              }
+            ]
+          },
+          {
+            "itemId": "curry",
+            "version": "1.0",
+            "approved": true,
+            "servings": 1,
+            "ingredients": [
+              {
+                "ingredientId": "chickpeas",
+                "quantity": 90,
+                "unit": "g",
+                "yield": 1,
+                "basis": "purchased"
+              },
+              {
+                "ingredientId": "vegetables",
+                "quantity": 60,
+                "unit": "g",
+                "yield": 0.8,
+                "basis": "prepared"
+              }
+            ]
+          },
+          {
+            "itemId": "chai",
+            "version": "1.0",
+            "approved": true,
+            "servings": 1,
+            "ingredients": [
+              {
+                "ingredientId": "milk",
+                "quantity": 120,
+                "unit": "ml",
+                "yield": 1,
+                "basis": "purchased"
+              },
+              {
+                "ingredientId": "tea",
+                "quantity": 3,
+                "unit": "g",
+                "yield": 1,
+                "basis": "purchased"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "latencyMs": 10620,
+  "totalTokens": 3191
+}

@@ -1,0 +1,143 @@
+1
+00:00:00,000 --> 00:00:05,985
+For a small business, tomorrow starts with a question: what should I buy today?
+
+2
+00:00:05,985 --> 00:00:08,712
+Too little stock means missed sales.
+
+3
+00:00:08,712 --> 00:00:12,424
+Too much means waste and cash sitting on a shelf.
+
+4
+00:00:12,424 --> 00:00:17,500
+Meet Stockwise, a planning copilot for everyday business decisions.
+
+5
+00:00:18,000 --> 00:00:21,961
+Here is Saffron Kitchen, our synthetic restaurant workspace.
+
+6
+00:00:21,961 --> 00:00:30,476
+The dashboard brings together tomorrow's expected servings, a purchase estimate, items to replenish, and measured forecast error.
+
+7
+00:00:30,476 --> 00:00:35,361
+The daily brief points the owner toward the decisions that need attention.
+
+8
+00:00:35,361 --> 00:00:41,500
+These are demonstration records, and we are not claiming measured savings at a real business.
+
+9
+00:00:42,000 --> 00:00:46,371
+The forecast explorer shows each dish over seven or fourteen days.
+
+10
+00:00:46,371 --> 00:00:53,326
+We start with an understandable same-weekday baseline and exclude unavailable observations from training.
+
+11
+00:00:53,326 --> 00:00:58,890
+A rolling-origin backtest compares it with a moving average using only earlier data.
+
+12
+00:00:58,890 --> 00:01:02,996
+The displayed ranges are heuristic, not calibrated guarantees.
+
+13
+00:01:02,996 --> 00:01:07,500
+The point is to show evidence and limitations alongside the numbers.
+
+14
+00:01:08,000 --> 00:01:11,324
+Restaurants need ingredients, not just dish forecasts.
+
+15
+00:01:11,324 --> 00:01:16,433
+Stockwise expands approved recipes and aggregates shared ingredients across dishes.
+
+16
+00:01:16,433 --> 00:01:21,481
+Grams become kilograms, and prepared vegetable weights account for trimming yield.
+
+17
+00:01:21,481 --> 00:01:24,005
+Purchased weights are not adjusted twice.
+
+18
+00:01:24,005 --> 00:01:32,500
+Stock lots retain expiry dates, and confirmed receipts retain arrival dates, so unusable stock and late deliveries cannot hide a shortage.
+
+19
+00:01:33,000 --> 00:01:36,148
+The purchase planner makes the arithmetic visible.
+
+20
+00:01:36,148 --> 00:01:43,578
+Required ingredients plus the chosen safety allowance, minus allocated stock and timely receipts, produce a shortfall.
+
+21
+00:01:43,578 --> 00:01:47,481
+That shortfall rounds up to supplier packs and minimum orders.
+
+22
+00:01:47,481 --> 00:01:52,078
+Each supplier's lead time and review period define the purchase coverage.
+
+23
+00:01:52,078 --> 00:01:56,422
+The owner can see excess caused by rounding and review delivery risk.
+
+24
+00:01:56,422 --> 00:01:58,500
+No order is placed automatically.
+
+25
+00:01:59,000 --> 00:02:02,817
+Now we increase expected demand by twenty-five percent.
+
+26
+00:02:02,817 --> 00:02:08,160
+The same planning tools recalculate ingredient needs and purchase quantities.
+
+27
+00:02:08,160 --> 00:02:13,365
+This is an explicit owner assumption, not a claimed causal promotion model.
+
+28
+00:02:13,365 --> 00:02:18,500
+Stock counts can also be updated, and the local audit log records changes.
+
+29
+00:02:19,000 --> 00:02:22,001
+Now we ask the copilot how much rice to purchase.
+
+30
+00:02:22,001 --> 00:02:30,270
+Meta's Muse Spark selects the purchase and recipe tools, reads the real planning outputs, and explains the shortfall and pack rounding.
+
+31
+00:02:30,270 --> 00:02:32,659
+This is a verified live model response.
+
+32
+00:02:32,659 --> 00:02:37,436
+The interface shows the returned model, latency, token use, and tool evidence.
+
+33
+00:02:37,436 --> 00:02:43,500
+If the API is unavailable, the numerical planner still works with a clearly labeled local fallback.
+
+34
+00:02:44,000 --> 00:02:46,807
+The same engine also supports retail products.
+
+35
+00:02:46,807 --> 00:02:50,896
+Owners can import validated daily sales and export purchase drafts.
+
+36
+00:02:50,896 --> 00:02:59,500
+Stockwise turns business records into a practical next action: know what will sell, calculate what you need, and buy with a little foresight.

@@ -1,0 +1,34 @@
+PROJECT NAME
+Stockwise — A clearer tomorrow.
+
+PROJECT DESCRIPTION
+Small business owners make tomorrow's purchasing decisions with yesterday's spreadsheets. Stockwise brings demand, recipes, and usable stock into one understandable daily workflow. Owners can explore a 7- or 14-day sales forecast, translate restaurant dish forecasts into raw ingredients, and review a purchase draft that respects preparation yields, expiry, reservations, incoming deliveries, supplier lead times, and purchase packs. Retail mode uses the same foundation to replenish finished products.
+
+An owner can ask, “How much rice should I buy, and why?” The Meta-powered copilot can retrieve the relevant forecast, recipe, and purchasing tools and explain the quantities behind the recommendation. The interface exposes those tool results so the owner can inspect the reasoning. Demand scenarios, stock-count changes, validated CSV imports, and purchase-list exports make the result usable during a daily planning conversation.
+
+This submission is a local single-user hackathon prototype. It includes labeled synthetic businesses and rolling-origin backtests against a moving-average baseline. It does not claim measured waste reduction or real-world forecast accuracy. Recommendations remain drafts; the system never places supplier orders. Hotel bookings and production integrations are future work.
+
+DESCRIBE YOUR USE OF META PRODUCTS TO BUILD THE SUBMITTED PROJECT
+Stockwise integrates Meta Model API on the server through its Chat Completions endpoint. The configurable default model is Muse Spark 1.3 (muse-spark-1.3), based on Meta's current published model documentation. The model receives the owner's question and a small allowlist of business-scoped tools: get_forecast, get_purchase_plan, and get_recipes. It chooses tools, reads actual planning outputs, and writes a plain-language explanation. The app validates tool names and arguments and displays the tool evidence alongside the response. Successful live responses record the returned model ID, latency, token usage, and selected tools in the local audit flow.
+
+Meta credentials stay on the server in an ignored environment file. Numerical forecasts, recipe expansion, and purchasing calculations run in deterministic application code. If Meta is unavailable, the core workflow still runs and the assistant shows a clearly labeled local summary. No Meta-generated imagery, WhatsApp, Instagram, Facebook, or live POS integration is claimed.
+
+Live verification on 4 November 2026: Muse Spark 1.3 (returned model ID muse-spark-1.3) successfully selected get_purchase_plan and get_recipes and produced a grounded rice-purchase explanation. The recorded diagnostic request used 3,191 total tokens across two model rounds and completed in 10,620 ms. It explained a 22.445 kg shortfall, rounded to a 25 kg order in 5 kg packs, and cited approved recipe v1.0. This is a single synthetic-data integration measurement, not a service latency benchmark. The API key was supplied by the project owner; credentials are kept in ignored .env and are absent from submission materials.
+
+WHY ARE META'S MODELS IMPORTANT TO YOUR SOLUTION?
+The difficult last step for many owners is turning a forecast into an understandable decision. Meta's model provides the natural-language interface between the owner's question and the planning engine: it can select the relevant tools, connect dish demand to recipe versions and stock allocation, and explain why an order is needed and why a pack leaves excess. This helps make a numerical planning system approachable without asking the owner to inspect spreadsheets or write queries.
+
+The model's role is interpretation and explanation. Stockwise keeps quantity calculations in tested code and gives the owner visible tool evidence. This combination lets Meta's conversational capabilities support a practical purchasing workflow while keeping the source of every quantity inspectable. Its value to owners, including multilingual usability, still needs validation with real operators.
+
+TECH STACK
+Node.js 24, built-in SQLite, native HTTP/fetch, HTML/CSS/JavaScript, Meta Model API. No npm runtime dependencies. Optional Windows narration or ElevenLabs for demo voiceover; Python/Pillow/FFmpeg for video assembly.
+
+DATA AND MEASUREMENTS
+84 days of generated daily sales for one restaurant and one retailer; synthetic recipes, stock lots, inbound receipts, and costs. Held-out tests compare recent same-weekday forecasts with a moving-average baseline. Scores vary with the seeded snapshot date and imported data. The dashboard shows measured synthetic-data WAPE, not an asserted business improvement.
+
+OFFICIAL API REFERENCES CONSULTED 4 NOVEMBER 2026
+https://dev.meta.ai/docs/protocols/chat-completions
+https://dev.meta.ai/docs/models
+
+SOURCE BRIEF
+AI_Demand_Forecasting_Development_Plan.pdf, supplied by the user. Its product roadmap informed prototype scope; it is not a statement of implemented production functionality or verified event rules.
