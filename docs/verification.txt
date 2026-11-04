@@ -32,14 +32,14 @@ Earlier live attempt exhausted a 900-token response budget; fixed with low reaso
 
 NARRATION
 Windows local speech successfully generated.
-ElevenLabs initially returned HTTP 401 missing_permissions. After the owner updated permissions, speech generation succeeded with the supplied voice and eleven_multilingual_v2. The final video uses ElevenLabs narration and labels its source on screen. No credential values are included in the video or evidence.
+ElevenLabs initially returned HTTP 401 missing_permissions. After the owner updated permissions, speech generation succeeded with the supplied voice and eleven_multilingual_v2. The final video uses ElevenLabs narration. No credential values are included in the video or evidence.
 
 FINAL VIDEO
 output/video/Stockwise-3-minute-demo.mp4
 Duration verified by FFmpeg: 2 minutes 59.92 seconds (under a 3-minute cap).
 1920 x 1080 H.264, 24 fps, AAC stereo narration, English selectable captions.
 Full media decode completed with exit code 0 and no decode errors.
-Visual review included the composited live Meta scene. This is a narrated screenshot walkthrough of the app, not a continuous live screen recording.
+Updated 5 November 2026: removed the external green presentation background, borders, branding overlays, slide titles, and footers. Product screenshots fill the complete 1920 x 1080 frame; tall pages pan vertically. Existing narration and scene durations are preserved. Reviewed extracted dashboard and live Meta frames and decoded the full final video successfully. This is a narrated screenshot walkthrough of the app, not a continuous live screen recording.
 
 LIMITATIONS
 Synthetic data; no measured waste reduction. Heuristic ranges. Single-user local app, no production authentication or tenant access enforcement. No hotel bookings, POS connectors, recipe editor, real supplier submission, or full stock-movement ledger. Generated model prose is reviewed by the owner rather than formally verified.

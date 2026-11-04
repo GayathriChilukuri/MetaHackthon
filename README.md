@@ -70,6 +70,6 @@ Sample recipes, costs, and sales are synthetic and do not establish commercial s
 
 ## Submission and video
 
-See `docs/submission.txt` for project description and Meta-use answers, `docs/video-storyboard.json` for the 180-second narration plan, and `docs/verification.txt` for observed checks. The video is a narrated screenshot walkthrough of the working app, including a verified live Meta answer and visible tool results. Narration source is identified on screen; ElevenLabs requires a key with Text to Speech permission.
+See `docs/submission.txt` for project description and Meta-use answers, `docs/video-storyboard.json` for the 180-second narration plan, and `docs/verification.txt` for observed checks. The video is a full-screen, product-only narrated screenshot walkthrough, including a verified live Meta answer and visible tool results. Tall pages pan vertically to show the app without an external presentation background, slide titles, or borders. The final narration uses ElevenLabs; speech generation requires a key with Text to Speech permission.
 
-`scripts/narrate.ps1` generates local Windows narration. `scripts/elevenlabs.mjs` is an optional ElevenLabs alternative using environment credentials. `scripts/render_video.py` assembles screenshots and narration; Pillow and FFmpeg are needed only for video production, not the app.
+`scripts/narrate.ps1` generates local Windows narration. `scripts/elevenlabs.mjs` is an optional ElevenLabs alternative using environment credentials. `scripts/render_video.py` assembles screenshots and narration with FFmpeg, needed only for video production, not the app. Rendering defaults to the saved ElevenLabs MP3 segments; pass `--voice-format wav` for local narration.
