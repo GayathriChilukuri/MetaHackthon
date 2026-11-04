@@ -14,3 +14,4 @@ output/video/*
 !output/video/voice-*.mp3
 output/evidence/*
 !output/evidence/meta-live-check.json
+!output/evidence/meta-hosted-check.json

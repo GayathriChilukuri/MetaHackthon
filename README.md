@@ -2,6 +2,13 @@
 
 A local hackathon prototype for demand forecasting and inventory planning, with a Meta Model API copilot. Restaurant/café mode translates dishes into raw ingredients. Retail mode plans finished-product replenishment.
 
+## Live public demo
+
+**https://stockwise-metahackthon.cipl-5060.chatgpt.site**
+
+The deployed version is in `hosted/`. It keeps the same interface and planning engine, uses Cloudflare D1 for separate browser workspaces, and calls Meta from the server with a hosted secret. Its persistent demo limits are 5 Meta questions per browser per UTC day and 30 shared questions per UTC day. Forecasts and local summaries remain usable when the allowance is exhausted. Use sample or non-sensitive data. See `docs/deployment.txt` for the deployment and verification details.
+
+The instructions below describe the original local Node.js app; the hosted adapter has its own README and Sites build setup.
 ## Run
 
 Requires **Node.js 24 or newer**. The app has **no npm dependencies**.

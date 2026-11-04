@@ -1,0 +1,23 @@
+STOCKWISE PUBLIC DEPLOYMENT — 5 NOVEMBER 2026
+
+Live URL: https://stockwise-metahackthon.cipl-5060.chatgpt.site
+Audience: public, no sign-in required to try the demo.
+Provider: Sites / Cloudflare Workers, Cloudflare D1.
+Hosted source: hosted/ in this repository; separate Sites-managed source repository used for publishing.
+Sites project: appgprj_6aeb7dbae4d8819199135eb24e22763a
+Deployed version: 1
+Sites source commit: 13d3ccf13ae96bc07ae564a55f7808f433e461d1
+
+Each browser receives a separate demo workspace using an HttpOnly, SameSite cookie. Sample records are synthetic. Stock changes, imports, audit entries, and reset are scoped to that browser workspace. This is a demo, not production user accounts or a full business tenancy system. The demo cookie lasts two days; do not rely on the hosted demo for permanent business records or sensitive data.
+
+Meta credentials are hosted server-side secrets, absent from the source and browser bundle. Persistent D1 counters allow 5 questions per browser per UTC day and 30 shared questions per UTC day. Existing per-question model/tool limits remain in place. These request limits do not constitute a currency spending cap. The numerical planner and labeled local summary remain available when Meta fails or the request allowance is exhausted.
+
+Verification:
+- Sites deployment reported succeeded with runtime environment revision 1.
+- Anonymous HTTPS requests returned the UI, health API, and food purchase plan.
+- Hosted Meta response: live muse-spark-1.3, 14,673ms, 3,494 total tokens; recommended 30kg rice for the 5 November snapshot.
+- Browser displayed the deployed dashboard with populated forecasts and purchases.
+- Hosted tests passed for browser isolation, audit scoping, imports, reset, validation, cross-origin writes, and persistent AI limits.
+- Production build completed; 65 generated build files checked for the actual Meta credential, with zero matches.
+
+The root Node.js app and its local data remain separate from the public hosted demo.
